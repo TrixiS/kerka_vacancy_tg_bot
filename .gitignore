@@ -1,3 +1,6 @@
+# Development
+*.sqlite3*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -120,7 +123,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env.dev
 .env
 .venv
 env/

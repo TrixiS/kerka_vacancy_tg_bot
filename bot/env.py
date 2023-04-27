@@ -12,7 +12,7 @@ class ENV(BaseSettings):
     qiwi_p2p_key: str
 
     class Config:
-        env_file = ROOT_PATH / ".env", ROOT_PATH / ".env.dev"
+        env_file = ROOT_PATH / ".env"
         env_file_encoding = ENCODING
 
 
