@@ -1,5 +1,6 @@
 import asyncio
 
+import bot.handlers.user.start  # noqa
 from prisma import Prisma
 
 from .bot import DISPATCHER
