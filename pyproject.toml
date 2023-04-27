@@ -8,6 +8,11 @@ packages = [{include = "kerka_vacancy_tg_bot"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+prisma = "^0.8.2"
+aiogram = "^2.25.1"
+pydantic = {extras = ["dotenv"], version = "^1.10.7"}
+nanoid = "^2.0.0"
+pyqiwip2p = "^2.0.6"
 
 
 [build-system]
