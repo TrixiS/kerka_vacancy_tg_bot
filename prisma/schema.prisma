@@ -13,8 +13,9 @@ datasource db {
 }
 
 model BotUser {
-  id   BigInt @id @unique
+  id      BigInt @id @unique
   // Native MySQL/Postgres enums should be used
   // but Python enum.IntEnum is used for now
-  role Int    @default(0) // 0 - user, 1 - banned
+  role    Int    @default(0) // 0 - user, 1 - banned
+  balance Int    @default(0)
 }
