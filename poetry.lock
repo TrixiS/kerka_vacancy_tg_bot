@@ -1027,18 +1027,6 @@ files = [
 ]
 
 [[package]]
-name = "nanoid"
-version = "2.0.0"
-description = "A tiny, secure, URL-friendly, unique string ID generator for Python"
-category = "main"
-optional = false
-python-versions = "*"
-files = [
-    {file = "nanoid-2.0.0-py3-none-any.whl", hash = "sha256:90aefa650e328cffb0893bbd4c236cfd44c48bc1f2d0b525ecc53c3187b653bb"},
-    {file = "nanoid-2.0.0.tar.gz", hash = "sha256:5a80cad5e9c6e9ae3a41fa2fb34ae189f7cb420b2a5d8f82bd9d23466e4efa68"},
-]
-
-[[package]]
 name = "nodeenv"
 version = "1.7.0"
 description = "Node.js virtual environment builder"
@@ -1676,4 +1664,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "797b30c859ce18986fe638261a251024d8d9de7de4486c2e5cea88ccbf462d93"
+content-hash = "8b4e3e8ad6b4a61c0dcf5dfd8a1b542047465d002b97eab9fdb8fd5a9d866747"
