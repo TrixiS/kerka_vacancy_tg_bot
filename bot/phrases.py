@@ -11,6 +11,7 @@ class AdminPhrases:
     enter_user_id_message_text = "Введите ID пользователя"
     enter_amount_message_text = "Введите сумму"
     set_balance_message_text = "Баланс установлен"
+    ban_user_message_text = "Пользователь заблокирован"
 
 
 @dataclass

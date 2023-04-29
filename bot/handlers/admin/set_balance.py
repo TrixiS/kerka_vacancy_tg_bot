@@ -4,10 +4,9 @@ from prisma.models import BotUser
 
 from ... import markups
 from ...bot import DISPATCHER
+from ...filters import INT_TEXT_FILTER
 from ...phrases import PHRASES
 from ...state import SetBalanceState
-
-INT_TEXT_FILTER = lambda m: m.text and m.text.isdigit()
 
 
 @DISPATCHER.message_handler(lambda m: m.text == PHRASES.admin.set_balance_button_text)
