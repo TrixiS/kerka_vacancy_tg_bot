@@ -10,6 +10,18 @@ DEPOSIT_MARKUP = types.InlineKeyboardMarkup().add(
     )
 )
 
+ADMIN_MARKUP = (
+    types.ReplyKeyboardMarkup(resize_keyboard=True)
+    .row(
+        types.KeyboardButton(text=PHRASES.admin.export_users_button_text),
+        types.KeyboardButton(text=PHRASES.admin.export_logs_button_text),
+    )
+    .row(
+        types.KeyboardButton(text=PHRASES.admin.set_balance_button_text),
+        types.KeyboardButton(text=PHRASES.admin.ban_user_button_text),
+    )
+)
+
 
 def create_check_payment_markup(bill: Bill):
     return (

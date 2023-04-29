@@ -2,7 +2,17 @@ from dataclasses import dataclass
 
 
 @dataclass
+class AdminPhrases:
+    admin_message_text = "Админка"
+    export_users_button_text = "Выгрузить пользователей"
+    export_logs_button_text = "Выгрузить логи"
+    set_balance_button_text = "Изменить баланс"
+    ban_user_button_text = "Заблокировать пользователя"
+
+
+@dataclass
 class BotPhrases:
+    admin = AdminPhrases()
     start_message_text_fmt = """Привет, {full_name}
 Сообщение пользователю:
 Я - бот для пополнения баланса. 

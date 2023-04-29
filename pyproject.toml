@@ -12,6 +12,7 @@ prisma = "^0.8.2"
 aiogram = "^2.25.1"
 pydantic = {extras = ["dotenv"], version = "^1.10.7"}
 pyqiwip2p = "^2.0.6"
+aiofiles = "^23.1.0"
 
 
 [build-system]

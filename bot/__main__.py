@@ -2,6 +2,8 @@ import asyncio
 import logging
 from logging.handlers import RotatingFileHandler
 
+import bot.handlers.admin.admin  # noqa
+import bot.handlers.admin.export_users  # noqa
 import bot.handlers.user.deposit  # noqa
 import bot.handlers.user.start  # noqa
 from prisma import Prisma
