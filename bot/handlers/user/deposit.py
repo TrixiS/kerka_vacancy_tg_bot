@@ -5,7 +5,7 @@ from aiogram.dispatcher import FSMContext
 from prisma.models import BotUser
 from pyqiwip2p import AioQiwiP2P
 
-from ... import markups
+from ... import filters, markups
 from ...bot import BOT, DISPATCHER
 from ...callback_data import CHECK_PAYMENT_CALLBACK_DATA, DEPOSIT_CALLBACK_DATA
 from ...env import env
@@ -17,7 +17,9 @@ BILL_LIFETIME_MINUTES = 5
 QIWI_API_CLIENT = AioQiwiP2P(auth_key=env.qiwi_p2p_key)
 
 
-@DISPATCHER.callback_query_handler(DEPOSIT_CALLBACK_DATA.filter())
+@DISPATCHER.callback_query_handler(
+    DEPOSIT_CALLBACK_DATA.filter(), filters.not_banned_user_filter
+)
 async def deposit_handler(query: types.CallbackQuery):
     await query.answer()
     await DepositState.waiting_amount.set()
@@ -27,7 +29,9 @@ async def deposit_handler(query: types.CallbackQuery):
 
 
 @DISPATCHER.message_handler(
-    lambda m: m.text and m.text.isdigit(), state=DepositState.waiting_amount
+    lambda m: m.text and m.text.isdigit(),
+    filters.not_banned_user_filter,
+    state=DepositState.waiting_amount,
 )
 async def deposit_amount_handler(message: types.Message, state: FSMContext):
     amount = int(message.text)
@@ -45,7 +49,9 @@ async def deposit_amount_handler(message: types.Message, state: FSMContext):
     )
 
 
-@DISPATCHER.callback_query_handler(CHECK_PAYMENT_CALLBACK_DATA.filter())
+@DISPATCHER.callback_query_handler(
+    CHECK_PAYMENT_CALLBACK_DATA.filter(), filters.not_banned_user_filter
+)
 async def check_payment_handler(
     query: types.CallbackQuery, callback_data: Dict[str, Any]
 ):
