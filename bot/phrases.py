@@ -8,6 +8,9 @@ class AdminPhrases:
     export_logs_button_text = "Выгрузить логи"
     set_balance_button_text = "Изменить баланс"
     ban_user_button_text = "Заблокировать пользователя"
+    enter_user_id_message_text = "Введите ID пользователя"
+    enter_amount_message_text = "Введите сумму"
+    set_balance_message_text = "Баланс установлен"
 
 
 @dataclass

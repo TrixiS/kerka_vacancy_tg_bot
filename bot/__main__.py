@@ -5,6 +5,7 @@ from logging.handlers import RotatingFileHandler
 import bot.handlers.admin.admin  # noqa
 import bot.handlers.admin.export_logs
 import bot.handlers.admin.export_users  # noqa
+import bot.handlers.admin.set_balance  # noqa
 import bot.handlers.user.deposit  # noqa
 import bot.handlers.user.start  # noqa
 from prisma import Prisma
