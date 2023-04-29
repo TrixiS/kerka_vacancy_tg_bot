@@ -3,12 +3,13 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 import bot.handlers.admin.admin  # noqa
+import bot.handlers.admin.export_logs
 import bot.handlers.admin.export_users  # noqa
 import bot.handlers.user.deposit  # noqa
 import bot.handlers.user.start  # noqa
 from prisma import Prisma
 
-from . import ROOT_PATH
+from . import LOGS_PATH
 from .bot import DISPATCHER
 from .middleware.bot_user_middleware import BotUserMiddleware
 
@@ -20,7 +21,7 @@ file_log_formatter = logging.Formatter(
     r"%(asctime)s %(levelname)s %(funcName)s(%(lineno)d) %(message)s"
 )
 file_log_handler = RotatingFileHandler(
-    ROOT_PATH / "logs.log",
+    LOGS_PATH,
     mode="a",
     maxBytes=15 * 1024 * 1024,
     backupCount=2,

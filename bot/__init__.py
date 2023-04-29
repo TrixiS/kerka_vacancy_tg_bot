@@ -7,3 +7,4 @@ from . import *
 
 ENCODING = "utf-8-sig"
 ROOT_PATH = Path(__file__).parent.parent
+LOGS_PATH = ROOT_PATH / "logs.log"
