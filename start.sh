@@ -1,0 +1,1 @@
+python3 -m pip install -r requirements.txt && python3 -m prisma db push && python3 -m bot
