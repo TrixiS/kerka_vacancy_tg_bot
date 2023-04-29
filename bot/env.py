@@ -2,8 +2,7 @@ from pathlib import Path
 
 from pydantic import BaseSettings
 
-ROOT_PATH = Path(__file__).parent.parent
-ENCODING = "utf-8-sig"
+from . import ENCODING, ROOT_PATH
 
 
 class ENV(BaseSettings):
